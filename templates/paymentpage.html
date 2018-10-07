@@ -1,0 +1,38 @@
+<!doctype html>
+<title>Payment Page</title>
+{#<style>#}
+{#    h1{#}
+{#        color: #721c24;#}
+{#        font-family: "Lemon/Milk";#}
+{#        font-size: large;#}
+{#        border: 2px solid #dc3545;#}
+{#        padding: 20px;#}
+{#        text-align: center;#}
+{#        margin: 50px;#}
+{#    }#}
+{#</style>#}
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='h1.css')}}'>
+<div class=page>
+  <h1>Payment Gateway</h1>
+  <div class=metanav>
+
+    <h3>
+      Please fill the details without any error. {{ test1 }}
+    </h3>
+
+    <form id='user_information' method='post' action='submit' >
+      <p>
+    Name: <input type='text' name='firstname' placeholder="First Name" />
+        <input type='text' name='lastname' placeholder="Last Name" />
+
+      <p>
+    Age: <input type='text' name='age' placeholder = "Enter the age"/>
+      </p>
+      <p>
+    <input type='Submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
+</html>

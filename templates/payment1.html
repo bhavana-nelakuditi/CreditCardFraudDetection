@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{#    <meta charset="UTF-8">#}
+    <title>Complete the payment</title>
+    <link rel="stylesheet" type="text/css" href={{ url_for("static",filename="paymentstyle1.css")}}>
+</head>
+<body>
+<form action="submit1" method="POST"  class="spf-form"   >
+
+
+
+    <fieldset class="spf-fs-name">
+      <h2>Name</h2>
+      <div class="spf-field spf-field-fname">
+        <label for="spf-fname">First Name</label>
+        <input type="text" pattern="[A-Za-z]{0,100}" class="spf-input-text" title="Only alphabets" name="fn" placeholder="Enter your First Name">
+      </div>
+      <div class="spf-field spf-field-lname">
+        <label  for="spf-lname">Last Name</label>
+        <input type="text" pattern="[A-Za-z]{0,100}" name = "ln" class="spf-input-text" placeholder = "Enter Last Name" >
+      </div>
+    </fieldset>
+
+    <fieldset class="spf-fs-cc">
+      <h2>Payment Details</h2>
+
+      <div class="spf-field">
+        <label for="cc">Credit Card Number:</label>
+    <input  type="text" pattern="[0-9]{13,16}" name="cc" placeholder="Enter the 16 digit Credit Card Number"  />
+    <img src="http://www.credit-card-logos.com/images/visa_mastercard_credit-card-logos/mc_vs_accpt_h_023_gif.gif"/><br></div>
+
+        <div class = "spf-verificaiton">
+        <label class="spf-field-group spf-verification_value">CVV</label>
+        <input id="cvv" type="text" pattern="[0-9]{3}"  />
+      </div>
+        <br>
+
+
+
+      <div class="spf-field spf-field-exp">
+        <label>Expiration Date</label>
+        <div class="spf-field-group spf-month">
+          <input type="text" class="spf-input-text spf-exp"  size="3" maxlength="2" placeholder="MM">
+          <!-- <label class="spf-label-secondary" for="spf-exp-m">Month (MM)</label> -->
+        </div>
+        <span class="spf-exp-divider">/</span>
+        <div class="spf-field-group spf-year">
+          <input type="text" class="spf-input-text spf-exp"  size="5" maxlength="4" placeholder="YYYY">
+          <!-- <label class="spf-label-secondary" for="spf-exp-y">Year (YYYY)</label> -->
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="spf-field-submit">
+      <input type="submit" class="button" value="Submit Payment">
+      <div id="message"></div>
+      <div id="errors"></div>
+    </fieldset>
+
+
+
+</form>
+<p>  {{ p2 }} </p>
+</body>
+</html>

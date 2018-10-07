@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <meta charset = "UTF-8">
+  <title> Payment Page</title>
+  <link rel="stylesheet" type="text/css" href={{ url_for("static",filename="paymentstyle.css")}}>
+</head>
+<body>
+
+<form action="submit" method="POST"  class="submit_form">
+    <div class ="heading">
+    <h3> COMPLETE THE PAYMENT FORM TO FINISH YOUR ORDER for {{ ta }} </h3>
+  </div>
+
+
+
+  <fieldset class = "user_data">
+    <legend>
+
+    <h2>Personal Details</h2>
+
+    <div class=" field field_fname">
+      <label for="fname">First Name:</label>
+      <input type="text" pattern="[A-Za-z]{0-9}" class="input-text" title="Only alphabets" name="fn" placeholder="John" required/>
+    </div>
+
+    <div class="field field_lname">
+      <label  for="spf-lname">Last Name:</label>
+      <input type="text" pattern="[A-Za-z]{0-9}" name = "ln"  title="Only alphabets" class="input-text" placeholder = "Doe" required />
+    </div>
+
+    <br>
+<br>
+    <div class="field field_email">
+      <label  for="spf-email">Email:</label>
+      <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" class="input-text" placeholder = "JohnDoe@xyz.com " name = "em"  required/>
+    </div>
+
+  </legend>
+  </fieldset>
+
+  <fieldset class = "card_data">
+    <legend>
+    <h2> Payment Details </h2>
+    <div class = "field_cardno">
+      <label for="cc">Credit Card Number:</label>
+      <input  type="text" pattern="[0-9]{8,9}" name="cc" class="input-text" placeholder="1234567898876543" required  />
+        <img src="http://www.credit-card-logos.com/images/visa_mastercard_credit-card-logos/mc_vs_accpt_h_023_gif.gif"/>
+        <label class="cvv">CVV</label>
+        <input id="cvv" type="text" pattern="[0-9]{3}" name ="cvv" class="input-text" placeholder="xxx" required/>
+    </div>
+    <br>
+    <div class="field_exp">
+      <label>Expiration Date</label>
+      <div class="spf-field-group spf-month">
+        <input type="text" class="input-text spf-exp" name="mm"  size="3" maxlength="2" placeholder="MM" required/>
+        <!-- <label class="spf-label-secondary" for="spf-exp-m">Month (MM)</label> -->
+      </div>
+      <span class="divider">/</span>
+      <div class="spf-field-group spf-year">
+        <input type="text" class="input-text spf-exp"  name ="yy" size="5" maxlength="4" placeholder="YYYY" required/>
+        <!-- <label class="spf-label-secondary" for="spf-exp-y">Year (YYYY)</label> -->
+      </div>
+      </div>
+<br>
+      <div class="IP Address">
+            <label for="ip">Enter your ip address:</label>
+        <input type="text" class="input-text" name ="ip" title = "Enter the ip address" placeholder="127.0.0.1" required/>
+        <!-- <label class="spf-label-secondary" for="spf-exp-y">Year (YYYY)</label> -->
+      </div>
+        </legend>
+      <br>
+    <input type="submit" class="button" value="Submit Payment" name = "submit"/>
+    <div id="message"></div>
+    <div id="errors"></div>
+  </fieldset>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+h1{
+        color: #721c24;
+        font-family: "Lemon/Milk";
+        font-size: large;
+        border: 2px solid #dc3545;
+        padding: 20px;
+        text-align: center;
+        margin: 50px;
+        background: rgba(76,17,80,0.3);
+    }
